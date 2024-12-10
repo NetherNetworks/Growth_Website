@@ -32,13 +32,16 @@ img{
 /* #endregion */
 
 /* #region Navbar */
+.navbar {
+    background: #fff;
+    padding: 20px;
+}
 .navbar .container{
     display: flex; /* alle Block-Elemente verhalten sich wie Inline-Elemente */
     justify-content: space-between; 
     /* Block-Elemente werden an den Anfang & das Ende gesetzt. Würde ein drittes Element dazu kommen,
     dann würde es zentriert werden mit gleichmäßigen Abstand zum linken & rechten Element. */
     align-items: center; /* alle Block-Elemente werden vertikal zentriert */
-    padding: 7px 15px;
 }
 .navbar .container .main-menu ul{
     display: flex;
@@ -54,6 +57,30 @@ img{
 }
 .navbar ul li a i{ 
     margin-right: 7px; /* Das Log-In Logo ist zu nahe am Text */
+}
+.navbar ul li:last-child a {
+    margin-left: 10px;
+  }
+/* #endregion */
+
+/* #region Hero */
+.hero{
+    margin-bottom: 50px;
+}
+.hero .container {
+    background: url('../images/hero-bg.png') no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    height: 550px;
+}
+.hero .hero-content {
+    width: 70%;
+    /* background: #333; */
+}
+.hero .hero-text{
+    width: 70%;
+    margin-bottom: 20px;
+    /* background: #c97070; */
 }
 /* #endregion */
 
@@ -75,14 +102,15 @@ img{
     /* #region Buttons */
     .btn{
         display: inline-block;
-        padding: 0px 0px;
+        padding: 13px 20px;
         background: var(--light-color);
         color: #333;
-        /* font-weight: 600; */
+        font-weight: 600;
         text-decoration: none;
         border: none;
         border-radius: 10px;
-        /* cursor: pointer; */
+        cursor: pointer;
+        text-align: center;
         transition: var(--transition-normal);
     }
     .btn:hover{
@@ -99,6 +127,42 @@ img{
     .btn-block{
         display: block;
         width: 100%;
+    }
+    /* #endregion */
+    
+    /* #region Text Classes */
+    .text-xxl{
+        font-size: 3rem;
+        line-height: 1.2;
+        font-weight: 600;
+        margin: 40px 0 20px;
+    }
+    .text-xl{
+        font-size: 2.2rem;
+        line-height: 1.4;
+        font-weight: normal;
+        margin: 40px 0 20px;
+    }
+    .text-lg{
+        font-size: 1.8rem;
+        line-height: 1.4;
+        font-weight: normal;
+        margin: 30px 0 20px;
+    }
+    .text-md{
+        font-size: 1.2rem;
+        line-height: 1.4;
+        font-weight: normal;
+        margin: 20px 0 10px;
+    }
+    .text-sm{
+        font-size: 0.9rem;
+        line-height: 1.4;
+        font-weight: normal;
+        margin: 10px 0 5px;
+    }
+    .text-center{
+        text-align: center;
     }
     /* #endregion */
 /* #endregion */
