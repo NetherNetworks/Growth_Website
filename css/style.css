@@ -1,3 +1,13 @@
+/* #region Variables */
+:root{ /* :root ist der Scope, also genau das Gleiche wie public */
+    --primary-color: #4891ff;
+    --light-color: #f4f4f6;
+    --dark-color: #111;
+    --transition-normal: 0.3s;
+}
+/* #endregion */
+
+/* #region General */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +17,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background: #fff;
+    background: #e4e4e4;
 }
 a {
     text-decoration: none;
@@ -19,3 +29,76 @@ ul{
 img{
     max-width: 100%;
 }
+/* #endregion */
+
+/* #region Navbar */
+.navbar .container{
+    display: flex; /* alle Block-Elemente verhalten sich wie Inline-Elemente */
+    justify-content: space-between; 
+    /* Block-Elemente werden an den Anfang & das Ende gesetzt. Würde ein drittes Element dazu kommen,
+    dann würde es zentriert werden mit gleichmäßigen Abstand zum linken & rechten Element. */
+    align-items: center; /* alle Block-Elemente werden vertikal zentriert */
+    padding: 7px 15px;
+}
+.navbar .container .main-menu ul{
+    display: flex;
+}
+.navbar ul li a{
+    padding: 10px 20px;
+    display: block;
+    font-weight: 600;
+    transition: var(--transition-normal); /* Hover-effect wird um 0.3 Sekunden verzögert für eine bessere Animation */
+}
+.navbar ul li a:hover{ /* Hier wird der Hover-effect definiert */
+    color: var(--primary-color);
+}
+.navbar ul li a i{ 
+    margin-right: 7px; /* Das Log-In Logo ist zu nahe am Text */
+}
+/* #endregion */
+
+/* #region Utility Classes */
+    /* #region Containers */
+    .container{
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .container-sm{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    /* #endregion */
+
+    /* #region Buttons */
+    .btn{
+        display: inline-block;
+        padding: 0px 0px;
+        background: var(--light-color);
+        color: #333;
+        /* font-weight: 600; */
+        text-decoration: none;
+        border: none;
+        border-radius: 10px;
+        /* cursor: pointer; */
+        transition: var(--transition-normal);
+    }
+    .btn:hover{
+        opacity: 0.8;
+    }   
+    .btn-primary{
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+    .btn-dark{
+        background-color: var(--dark-color);
+        color: #fff;
+    }
+    .btn-block{
+        display: block;
+        width: 100%;
+    }
+    /* #endregion */
+/* #endregion */
