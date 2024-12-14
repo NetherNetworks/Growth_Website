@@ -89,13 +89,13 @@ img{
     padding: 10px 0px 60px;
     /* background: #111; */
 }
-.video-content{
+.video .video-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     /* background: #4891ff; */
 }
-.video-preview{
+.video .video-preview{
     margin-bottom: 20px;
 }
 /* #endregion */
@@ -108,16 +108,45 @@ img{
     width: 700px;
     margin-bottom: 40px;
 }
-.testimonials-grid{
+.testimonials .testimonials-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Alternativ: 1fr 1fr 1fr */
     gap: 30px;
 }
-.testimonials-grid .card p:nth-child(2){ 
+.testimonials .testimonials-grid .card p:nth-child(2){ 
     /* Pseudo-Klasse (nth-child). Jeder 2te Paragraph in einem .card 
     W3schools: https://www.w3schools.com/cssref/sel_nth-child.php */
     margin-top: 30px;
     font-weight: bold;
+}
+/* #endregion */
+
+/* #region Pricing */
+.pricing .pricing-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+    gap: 30px;
+}
+.pricing .pricing-card-subheading{
+    margin-bottom: 30px;
+}
+.pricing .pricing-card-price{
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+.pricing ul{
+    margin: 30px 0;
+}
+.pricing ul li{
+    margin-bottom: 20px;
+}
+.pricing ul li i{
+    margin-right: 10px;
+}
+.pricing .pricing-footer{
+    margin: 30px 0;
 }
 /* #endregion */
 
@@ -134,6 +163,15 @@ img{
         margin: 0 auto;
         padding: 0 15px;
     }
+    /* #endregion */
+
+    /* #region Cards */
+        .card{
+            background: #fff;
+            color: #000;
+            border-radius: 10px;
+            padding: 20px;
+        }
     /* #endregion */
 
     /* #region Buttons */
@@ -202,7 +240,7 @@ img{
         text-align: center;
     }
     /* #endregion */
-
+    
     /* #region Background */
     .bg-primary{
         background: var(--primary-color);
@@ -221,13 +259,5 @@ img{
         color: #fff;
     }
     /* #endregion */
-
-    /* #region Cards */
-    .card{
-        background: #fff;
-        color: #000;
-        border-radius: 10px;
-        padding: 20px;
-    }
-    /* #endregion */
+    
 /* #endregion */
