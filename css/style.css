@@ -155,10 +155,6 @@ img{
     padding: 40px 0;
 }
 
-.faq .faq-content{
-    background: #000;
-}
-
 .faq .faq-group {
 border-bottom: 1px solid #ccc;
 padding-bottom: 20px;
@@ -213,6 +209,7 @@ display: none;
   .faq ul.faq-menu li.active {
     background: var(--primary-color);
     color: #fff;
+    transition: 0.5s;
   }
 
 /* #endregion */
